@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./asset/styles.css">
+    <link rel="stylesheet" href="./asset/bootstrap.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Todo Web</title>
+</head>
+
+<body class="">
+    <div class="container d-flex  justify-content-center align-items-center">
+        <div class="row ">
+            <div class="col">
+                <div class="card" style="width: 30rem;">
+                    <div class="card-body">
+                        <h5 class="card-title my-3 ">Add task</h5>
+                        <form action="">
+                            <div class="form-floating mb-4 ">
+                                <input type="text" class="form-control shadow-sm bg-white rounded" id="floatingInput"
+                                    placeholder="Title">
+                                <label for="floatingInput">Title</label>
+                            </div>
+
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control shadow-sm bg-white rounded " id="floatingInput "
+                                    placeholder="Description">
+                                <label for="floatingInput">Description</label>
+                            </div>
+                        </form>
+
+                        <div class="d-flex justify-content-between ">
+                            <button type="button" class="btn btn-secondary btn-sm shadow-none w-50 me-2">Cancel</button>
+                            <button type="button" class="btn btn-success btn-sm shadow-none w-50">Add</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card" style="width: 30rem;">
+                    <div class="card-body">
+                        <h5 class="card-title my-3 "> Todo List</h5>
+                        <hr class="">
+                        <div class="todo-list">
+                            <div class="form-check ps-0 d-flex justify-content-between">
+                                <label for="check-box">
+                                    <input type="checkbox" class="checkbox me-2 ">Build a form using html and css
+                                </label>
+
+                                <div class="trash">
+                                    <img src="./asset/trash-bin.png" alt="" width="25" height="25">
+                                </div>
+                            </div>
+                            <hr class="">
+
+                            <div class="form-check ps-0 d-flex justify-content-between ">
+                                <label for="check-box">
+                                    <input type="checkbox" class="checkbox me-2 ">Write a javascript code to validate
+                                    the form
+                                </label>
+
+                                <div class="trash">
+                                    <img src="./asset/trash-bin.png" alt="" width="25" height="25">
+                                </div>
+                            </div>
+                            <hr class="">
+
+                            <div class="form-check ps-0 d-flex justify-content-between">
+                                <label for="check-box">
+                                    <input type="checkbox" class="checkbox me-2 ">Build a hotel Web site
+                                </label>
+
+                                <div class="trash">
+                                    <img src="./asset/trash-bin.png" alt="" width="25" height="25">
+                                </div>
+                            </div>
+                            <hr class="">
+
+                            <div class="form-check ps-0 d-flex justify-content-between">
+                                <label for="check-box">
+                                    <input type="checkbox" class="checkbox me-2 ">Build Todo web app
+                                </label>
+
+                                <div class="trash">
+                                    <img src="./asset/trash-bin.png" alt="" width="25" height="25">
+                                </div>
+                            </div>
+                            <hr class="">
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script src="./asset/app.js"></script>
+
+</html>
