@@ -8,11 +8,12 @@
 }
 
 input[type="text"]{
-  padding: 5px!important;
-  /* border-left: none; */
-  /* border-right: none; */
+  /* padding: 5px!important; */
+  border-left: none;
+  border-right: none;
   border-top: none; 
-  margin: 5px 0 10px 0;
+  border-bottom: solid  #F5F8F7 2px;
+  /* margin: 5px 30 10px 0; */
   /* border: none; */
   /* background: #f1f1f1; */
 }
@@ -21,4 +22,5 @@ input[type="text"]{
 input[type="text"]:focus{
   /* background-color: #F5F8F7; */
   outline: none;
+  padding-left: 30px;
 }
