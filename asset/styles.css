@@ -1,20 +1,21 @@
-*{
-    font-family: 'Quicksand', sans-serif;
+body{
+  background-color:#F5F8F7!important ;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .container{
-    background-color: #F5F8F7;
-    height: 100vh;
+  /* background-color: #F5F8F7; */
+  height: 100vh;
 }
 
 input[type="text"]{
   /* padding: 5px!important; */
-  border-left: none;
-  border-right: none;
-  border-top: none; 
-  border-bottom: solid  #F5F8F7 2px;
+  /* border-left: none; */
+  /* border-right: none; */
+  /* border-top: none;  */
+  /* border: solid  #F5F8F7 2px; */
   /* margin: 5px 30 10px 0; */
-  /* border: none; */
+  border: none;
   /* background: #f1f1f1; */
 }
 
@@ -22,5 +23,31 @@ input[type="text"]{
 input[type="text"]:focus{
   /* background-color: #F5F8F7; */
   outline: none;
-  padding-left: 30px;
+  /* padding-left: 30px; */
 }
+
+hr{
+  opacity: 0.05!important;
+}
+/* 
+.card{
+  padding-left: 0%!important;
+} */
+
+.form-field.error input {
+    border-color: red;
+}
+
+.form-field.success input {
+    border-color: green;
+}
+
+.form-field small {
+    color: red;
+}
+
+.form-field input {
+    border: solid 1px #ddd;
+    
+}
+
