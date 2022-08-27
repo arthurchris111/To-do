@@ -3,13 +3,17 @@ const cancelButton = document.getElementById("cancelBtn");
 const title = document.getElementById("title");
 const description = document.getElementById("description");
 const todoForm = document.getElementById("todoForm");
-const deleteItem = document.getElementById("delete")
+const deleteButton = document.querySelectorAll("#deleteButton");
+const todoItem = document.querySelector(".todoItem");
+const trash = document.querySelector(".trash")
+
 
 var todoList = [];
 var inputValues = {}
 
 addBtn.addEventListener("click", (event) => {
     event.preventDefault()
+
     titleValidation();
     descriptionValidation();
 
@@ -28,7 +32,15 @@ addBtn.addEventListener("click", (event) => {
     todoSelector()
     todoForm.reset();
 
+
 })
+
+trash.addEventListener('click', (e) => {
+    if (e.target.classList.contains('deleteButton')) {
+        e.target.parentElement.remove()
+    }
+})
+
 
 // const isFormValid = () => {
 //     if (!descriptionValidation() && !titleValidation()) {
@@ -63,7 +75,7 @@ const todoSelector = () => {
                                     </ol>
                                 </div>
                                 <div class="trash">
-                                    <img src="./asset/trash-bin.png" alt="" width="25" height="25" id="delete">
+                                    <img src="./asset/trash-bin.png" alt="" width="25" height="25" id="deleteButton">
                                 </div>
                             </div>
                              <hr/>
