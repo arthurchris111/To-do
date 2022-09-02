@@ -3,9 +3,10 @@ const cancelButton = document.getElementById("cancelBtn");
 const title = document.getElementById("title");
 const description = document.getElementById("description");
 const todoForm = document.getElementById("todoForm");
-const deleteButton = document.querySelectorAll("#deleteButton");
+const deleteBtn = document.querySelectorAll(".deleteBtn");
 const todoItem = document.querySelector(".todoItem");
-const trash = document.querySelector(".trash")
+// const ul = document.querySelector("todo-list");
+const deleteSpan = document.getElementById("deleteSpan");
 
 
 var todoList = [];
@@ -28,33 +29,18 @@ addBtn.addEventListener("click", (event) => {
         "title": title.value,
         "description": description.value
     }
+
     todoList.push(inputValues);
-    todoSelector()
+
+    todoSelector();
+
     todoForm.reset();
 
 
 })
 
-trash.addEventListener('click', (e) => {
-    if (e.target.classList.contains('deleteButton')) {
-        e.target.parentElement.remove()
-    }
-})
 
 
-// const isFormValid = () => {
-//     if (!descriptionValidation() && !titleValidation()) {
-//         return
-//     }
-
-//     inputValues = {
-//         "title": title.value,
-//         "description": description.value
-//     }
-//     todoList.push(inputValues);
-//     todoSelector()
-
-// }
 
 const todoSelector = () => {
     if (todoList.length == 0) {
@@ -65,24 +51,72 @@ const todoSelector = () => {
 
     todoList.map((item) => {
         todoItemSelector.innerHTML =
-            ` <div class="todoItem d-flex align-items-center">
+            `<div class="todoItem  d-flex align-items-center" id="demo">
                                 <div class="flex-shrink-0">
-                                    <input type="checkbox"> </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <ol class="list-unstyled m-0">
-                                        <li>${item.title} </li>
-                                        <li>${item.description} </li>
-                                    </ol>
+                                    <input type="checkbox" class="todo-input done-icon"> 
                                 </div>
-                                <div class="trash">
-                                    <img src="./asset/trash-bin.png" alt="" width="25" height="25" id="deleteButton">
+                                <div class="list flex-grow-1 ms-3 d-flex justify-content-between align-items-center">
+                                    <ul class = "ul list-unstyled m-0 ">
+                                        <li class="todo-text">${item.title}</li>
+                                        <li class="todo-text d-flex justify-content-between align-items-center">${item.description}s</li>                                
+                                    </ul>
+                                    
+                                    <span id="deleteSpan" border-0 bg-transparent" onclick="removeItem()">
+                                        <img src="./asset/trash-bin.png" alt="delete" width="25" height="25" class="deleteBtn">
+                                    </span>             
                                 </div>
-                            </div>
-                             <hr/>
+                             <hr>
                             `
+
     })
     todoItemSelector.appendChild(todoItem)
+
 }
+
+
+const removeItem = () => {
+    const element = document.getElementById("demo");
+    element.remove();
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
