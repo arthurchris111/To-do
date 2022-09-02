@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./asset/styles.css">
     <link rel="stylesheet" href="./asset/bootstrap.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/8cb48a9b14.js" crossorigin="anonymous"></script>
     <title>Todo Web</title>
 </head>
 
@@ -22,8 +23,8 @@
                             <div class="form-floating mb-4 form-field">
                                 <input type="text" class="form-control shadow-sm bg-white rounded titleInput" id="title"
                                     placeholder="Title">
-                                <small></small>
                                 <label for="floatingInput">Title</label>
+                                <small></small>
                             </div>
 
                             <div class="form-floating mb-3 form-field">
@@ -34,14 +35,13 @@
                             </div>
                         </form>
 
-                        <div class="d-flex justify-content-between ">
+                        <div class="d-flex justify-content-between">
                             <button type="button" class="btn btn-secondary btn-sm shadow-none w-50 me-2"
                                 id="cancelBtn">Cancel</button>
                             <button type="button" class="btn btn-success btn-sm shadow-none w-50"
                                 id="addBtn">Add</button>
                         </div>
                     </div>
-
                 </div>
             </div>
 
@@ -51,8 +51,10 @@
                         <h5 class="card-title my-3">Todo List</h5>
                         <hr>
                         <div class="todoList">
-                            <div class="todoItem">
+                            <div class="todoItem" id="demo">
 
+                                <span onclick="removeItem()"></span>
+                                <hr>
                             </div>
                         </div>
                     </div>
@@ -61,7 +63,6 @@
         </div>
 
     </div>
-
 </body>
 <script src="./asset/app.js"></script>
 
