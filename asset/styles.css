@@ -50,4 +50,6 @@ hr{
     border: solid 1px #ddd;
     
 }
-
+.textDecoration {
+  text-decoration: line-through;
+}
