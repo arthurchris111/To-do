@@ -48,14 +48,14 @@ const todoSelector = () => {
 
     todoList.map((item) => {
         todoItemSelector.innerHTML =
-            `<div class="todoItem  d-flex align-items-center" id="demo">
+            `<div class="todoItem d-flex align-items-center" id="demo">
                                 <div class="flex-shrink-0">
                                     <input type="checkbox" class="todo-input" id="checkBox" onclick="strickText()"> 
                                 </div>
                                 <div class="list flex-grow-1 ms-3 d-flex justify-content-between align-items-center">
-                                    <ul class = "ul list-unstyled m-0 ">
-                                        <li id="todoText">${item.title}</li>
-                                        <li id="todoText" class="d-flex justify-content-between align-items-center">${item.description}</li>                                
+                                    <ul class = "list-unstyled m-0" id="ul">
+                                        <li class="todoText">${item.title}</li>
+                                        <li class="todoText class="d-flex justify-content-between align-items-center">${item.description}</li>                                
                                     </ul>
                                     
                                     <span id="deleteSpan" class="border-0 bg-transparent" onclick="removeItem()">
@@ -69,17 +69,18 @@ const todoSelector = () => {
 
 //strick-through inputValues
 const strickText = () => {
-    // var todoText = document.getElementsByClassName("todoText");
+    var todoText = document.getElementsByClassName("todoText");
+    const checkBox = document.getElementById("checkBox");
+
     // for (var i in todoText)
     //     todoText[i].style.textDecoration = 'line-through'
-    // if (document.querySelector("#checkBox").checked) {
-    //     document.querySelector("#todoText").style.textDecoration = "line-through"
-    // }
+    if (checkBox.checked) {
+        document.getElementById("ul").style.textDecorationLine = "line-through";
+    } else {
+        document.getElementById("ul").style.textDecorationLine = "none";
+    }
 
 }
-
-
-
 
 //clear input field
 const clearFields = () => {
@@ -93,6 +94,50 @@ const removeItem = () => {
     const element = document.getElementById("demo");
     element.remove();
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //validation
 todoForm.addEventListener('input', (event) => {
