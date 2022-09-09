@@ -12,8 +12,6 @@ var todo = [];
 var todoListView = []
 var inputValues = {}
 
-
-
 addButton.addEventListener('click', () => {
     const input = document.querySelector('#input');
 
@@ -23,7 +21,6 @@ addButton.addEventListener('click', () => {
     if (isFormValid == false) {
         return
     }
-
 
     inputValues = {
         "title": title.value,
