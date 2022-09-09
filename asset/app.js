@@ -31,7 +31,6 @@ addButton.addEventListener('click', () => {
         addToList(inputValues);
         todoForm.reset();
     }
-
 });
 
 
@@ -72,7 +71,7 @@ const strikeText = (id) => {
     }
 
 }
-
+debugger
 //remove-item
 const removeItem = (id) => {
     console.log(id)
