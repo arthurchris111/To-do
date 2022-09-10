@@ -59,7 +59,7 @@ const addToList = (task) => {
 }
 
 
-//strick-through inputValues
+//strick-through inputValues 
 const strikeText = (id) => {
     console.log(id, '======id')
     const checkBox = document.getElementById("checkBox_" + id);
